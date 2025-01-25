@@ -1,108 +1,197 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>First Styling Project</title>
- <style>
-  /* Style the body tag */
-body {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f9;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Two</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-/* Style the header tag */
-header {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  text-align: center;
-}
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      background-color: #f4f4f9;
+    }
 
-/* Style the nav tag */
-nav {
-  background-color: #444;
-  padding: 10px;
-}
+    /* Skip to Main Content */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 10px;
+      background: #0078d7;
+      color: white;
+      padding: 8px 12px;
+      text-decoration: none;
+      z-index: 1000;
+    }
 
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
+    .skip-link:focus {
+      top: 10px;
+      outline: 2px solid black;
+    }
 
-nav ul li {
-  margin: 0 15px;
-}
+    /* Navigation */
+    nav {
+      display: inline-block;
+      width: 80%;
+      background-color: #444;
+      color: white;
+      padding: 10px;
+      margin: 20px auto;
+      text-align: center;
+    }
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
+    nav img {
+      width: 10%;
+      margin-right: 10px;
+    }
 
-nav ul li a:hover {
-  text-decoration: underline;
-}
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+    }
 
-/* Style the main tag */
-main {
-  background-color: #e2e8f0;
-  font-size: 18px;
-  padding: 20px;
-}
+    nav ul li {
+      margin: 0 15px;
+    }
 
-/* Style the footer tag */
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px;
-}
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px 10px;
+      transition: background 0.3s;
+    }
 
-/* Style the li tag */
-li {
-  display: inline-block;
-  width: auto;
-}
+    nav ul li a:hover {
+      background-color: #0078d7;
+      border-radius: 5px;
+    }
 
-/* Style the h1 tag */
-h1 {
-  text-align: center;
-  font-family: 'Georgia', serif;
-  color: #0078d7;
-}
+    /* Main Content */
+    main {
+      background-color: #e2e8f0;
+      font-size: 18px;
+      padding: 20px;
+    }
 
-/* Style the p tag */
-p {
-  line-height: 1.8;
-  margin-bottom: 10px;
-}
+    /* Grid Layout */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 40%);
+      justify-content: space-between;
+      align-items: center;
+      row-gap: 30px;
+      column-gap: 20px;
+    }
 
- </style>
+    .grid img {
+      width: 100%;
+    }
+
+    /* Flex Layout */
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    /* Commented Out li Style */
+    /*
+    li {
+      display: inline-block;
+      width: auto;
+    }
+    */
+  </style>
 </head>
-
 <body>
-  
-  <header>
-    This is Header Section.
-  </header>
-  <nav>This is Nav Section, Here we apply just Background Property.
-  </nav>
-  <main> This is main section, and here we apply just only Background and Font Size Property.</main>
-  <li>List A</li>
-  <li>List B</li>
-  <li>List C</li>
-  <li>List D</li>
-  <li>List E</li>
-  <h1>Heading1</h1>
-  <p>This is paragraph.</p>
-  <footer> Copywrite 10-1-2025, and here we apply Background color only.</footer>
-</body>
+  <!-- Skip to Main Content -->
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
 
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <img src="https://yandex.com/images/search?pos=4&img_url=https%3A%2F%2Fpixy.org%2Fsrc%2F108%2F1080465.jpg&text=logo&rpt=simage&lr=10502" alt="Logo">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <section id="home">
+      <h1>Welcome to My Website</h1>
+      <p>This is a demonstration of accessible, modern web design using HTML and CSS.</p>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>We specialize in creating accessible and visually appealing web experiences.</p>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="grid">
+        <div>
+          <img src="https://avatars.mds.yandex.net/i?id=448d449efddb9baea6167b1d1d953a28bad477fe-9181226-images-thumbs&n=13" alt="Service 1">
+          <p>Service 1</p>
+        </div>
+        <div>
+          <img src="https://i.ytimg.com/vi/Nh6qkvr-4bY/maxresdefault.jpg" alt="Service 2">
+          <p>Service 2</p>
+        </div>
+        <div>
+          <img src="https://avatars.mds.yandex.net/i?id=448d449efddb9baea6167b1d1d953a28bad477fe-9181226-images-thumbs&n=13" alt="Service 3">
+          <p>Service 3</p>
+        </div>
+        <div>
+          <img src="https://i.ytimg.com/vi/Nh6qkvr-4bY/maxresdefault.jpg" alt="Service 4">
+          <p>Service 4</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <div class="flex">
+        <div>
+          <p>Address: 123 Main St</p>
+        </div>
+        <div>
+          <p>Email: info@example.com</p>
+        </div>
+        <div>
+          <p>Phone: (555) 123-4567</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Accessible Site</p>
+  </footer>
+</body>
 </html>
